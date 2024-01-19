@@ -33,7 +33,13 @@ const connectDB = async () => {
 dotenv.config()
 app.use(express.json())
 app.use("/images",express.static(path.join(__dirname,"/images")))
-app.use(cors({ credentials: true, origin: 'https://ink-blogic.vercel.app', methods: ["POST", "GET"] }));
+app.use(
+cors({
+origin: 'https://ink-blogic.vercel.app',
+methods : ["POST","GET","DELETE","UPDATE","PATCH"],
+credentials:true,
+optionSuccessStatus:200
+}));
 
 app.use(cookieParser())
 app.use("/api/auth",authRoute)
