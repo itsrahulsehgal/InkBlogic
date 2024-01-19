@@ -22,7 +22,7 @@ const Home = () => {
   const fetchPosts=async()=>{
     setLoader(true)
     try{
-      const res=await axios.get("http://localhost:5000/api/posts/"+search)
+      const res=await axios.get("https://ink-blogic-backend.vercel.app/api/posts/"+search)
       // console.log(res.data)
       setPosts(res.data)
       if(res.data.length===0){

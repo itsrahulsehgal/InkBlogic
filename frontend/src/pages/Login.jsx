@@ -16,7 +16,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://ink-blogic-backend.vercel.app/api/auth/login",
         { email, password },
         {
           withCredentials: true,

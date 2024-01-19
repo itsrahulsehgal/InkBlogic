@@ -9,7 +9,7 @@ const Comment = ({c,post}) => {
   const {user}=useContext(UserContext)
   const deleteComment=async(id)=>{
     try{
-      await axios.delete("http://localhost:5000/api/comments/"+id,{withCredentials:true})
+      await axios.delete("https://ink-blogic-backend.vercel.app/api/comments/"+id,{withCredentials:true})
       window.location.reload(true)
     }
     catch(err){

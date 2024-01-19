@@ -20,7 +20,7 @@ const MyBlogs = () => {
   const fetchPosts=async()=>{
     setLoader(true)
     try{
-      const res=await axios.get("http://localhost:5000/api/posts/user/"+user._id)
+      const res=await axios.get("https://ink-blogic-backend.vercel.app/api/posts/user/"+user._id)
       // console.log(res.data)
       setPosts(res.data)
       if(res.data.length===0){

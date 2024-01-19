@@ -19,7 +19,7 @@ export function UserContextProvider({children}){
 
     const getUser=async()=>{
       try{
-        const res=await axios.get("http://localhost:5000/api/auth/refetch",{withCredentials:true})
+        const res=await axios.get("https://ink-blogic-backend.vercel.app/api/auth/refetch",{withCredentials:true})
         // console.log(res.data)
         setUser(res.data)
 
